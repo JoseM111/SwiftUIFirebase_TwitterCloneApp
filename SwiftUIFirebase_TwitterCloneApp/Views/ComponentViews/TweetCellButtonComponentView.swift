@@ -20,3 +20,14 @@ struct TweetCellButtonComponentView: View {
     }
 }
 
+extension Button where Label == Image {
+    
+    init(_ sf_iconName: String, completionHandler: @escaping () -> Void) {
+        //∆..........
+        self.init(action: completionHandler) {
+            //∆..........
+            Image(systemName: sf_iconName)
+        }
+    }
+}
+
