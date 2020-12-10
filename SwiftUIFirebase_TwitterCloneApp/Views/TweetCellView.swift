@@ -65,35 +65,43 @@ struct TweetCellView: View {
             
             HStack {
                 
-                TweetCellButtonComponentView(actionCompletionHandler: {
+                Button("bubble.left") {
                     //∆..........
-                    /// CODE
                     
-                }, sfImageName: "bubble.left")
+                }
+                .font(.system(size: 16))
+                .frame(width: 32, height: 32)
                 
                 Spacer(minLength: 0) // Spaced Horizontally
                 
-                TweetCellButtonComponentView(actionCompletionHandler: {
+                ///∆ ........... arrow.2.squarepath ...........
+                Button("arrow.2.squarepath") {
                     //∆..........
-                    /// CODE
                     
-                }, sfImageName: "arrow.2.squarepath")
+                    
+                }
+                .font(.system(size: 16))
+                .frame(width: 32, height: 32)
                 
                 Spacer(minLength: 0) // Spaced Horizontally
                 
-                TweetCellButtonComponentView(actionCompletionHandler: {
+                ///∆ ........... heart ...........
+                Button("heart") {
                     //∆..........
-                    /// CODE
                     
-                }, sfImageName: "heart")
+                    
+                }
+                .font(.system(size: 16))
+                .frame(width: 32, height: 32)
                 
                 Spacer(minLength: 0) // Spaced Horizontally
                 
-                TweetCellButtonComponentView(actionCompletionHandler: {
+                ///∆ ........... bookmark ...........
+                Button("bookmark") {
                     //∆..........
-                    /// CODE
                     
-                }, sfImageName: "bookmark")
+                    
+                }
                 
                 
             }// ∆ END HStack
