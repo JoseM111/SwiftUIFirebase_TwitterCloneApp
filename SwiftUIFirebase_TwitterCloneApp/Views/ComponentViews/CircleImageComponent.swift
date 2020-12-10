@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleImageComponentView: View {
+struct CircleImageComponent: View {
     // MARK: - ©PROPERTIES
     //∆..............................
     let imageName: String
