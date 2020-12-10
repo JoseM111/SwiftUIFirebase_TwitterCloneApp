@@ -6,7 +6,7 @@ struct SearchBarComponentView_Previews: PreviewProvider {
     static var previews: some View {
         
         ///  • With `Binding<String>` variables you can do: .constant("Enter preferred text")
-        SearchBarComponentView(text: .constant("Search..."))//.padding(.all, 100)
+        SearchBarComponent(text: .constant("Search..."))//.padding(.all, 100)
             .preferredColorScheme(.dark)
             //.previewLayout(.sizeThatFits)
             //.previewLayout(.fixed(width: 360, height: 720))
@@ -15,7 +15,7 @@ struct SearchBarComponentView_Previews: PreviewProvider {
     }
 }
 
-struct SearchBarComponentView: View {
+struct SearchBarComponent: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
     @Binding var text: String
