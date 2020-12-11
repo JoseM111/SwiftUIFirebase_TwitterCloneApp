@@ -91,11 +91,11 @@ struct TweetCellComponent: View {
                 Spacer(minLength: 0) // Spaced Horizontally
                 
                 ///∆ ........... bookmark ...........
-                Button("bookmark") {
+                Button("bookmark", completionWhenImage: {
                     //∆..........
                     
                     
-                }
+                })
                 
                 
             }// ∆ END HStack

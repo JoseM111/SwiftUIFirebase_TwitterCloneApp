@@ -31,6 +31,30 @@ extension Color {
 
 /**©--------------------------------------------------------------©*/
 
+// MARK: -∆ ••••••••• BEGINS [ Button Extensions ] •••••••••
+extension Button where Label == Image {
+    
+    init(_ sf_iconName: String, completionWhenImage: @escaping () -> Void) {
+        //∆..........
+        self.init(action: completionWhenImage) {
+            //∆..........
+            Image(systemName: sf_iconName)
+        }
+    }
+}
+
+extension Button where Label == Text {
+    
+    init(_ textStr: String, completionWhenText: @escaping () -> Void) {
+        //∆..........
+        self.init(action: completionWhenText) {
+            //∆..........
+            Text(textStr)
+        }
+    }
+}
+// MARK: -∆ ••••••••• END [ Button Extensions ] •••••••••
+
 /** [ HOW TO CALL ]
  arrayToStr(arrayName: "characterClass", array: characterClass)
  arrayToStr(array: characterClass) */
