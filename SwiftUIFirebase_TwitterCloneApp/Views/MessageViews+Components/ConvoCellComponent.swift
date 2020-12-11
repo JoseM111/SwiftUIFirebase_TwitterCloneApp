@@ -43,6 +43,7 @@ struct ConvoCellComponent: View {
                 //∆ HANGER ™👕™ .................
                 
             }// ∆ END HStack
+            .foregroundColor(.black)
             .padding(.trailing)
             //∆ HANGER ™👕™ .................
             

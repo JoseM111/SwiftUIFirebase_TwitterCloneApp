@@ -17,7 +17,7 @@ struct ConversationsView_Previews: PreviewProvider {
 struct ConversationsView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    
+    @State var isShowingNewMsgView: Bool = false
     //∆..............................
     
     var body: some View {
@@ -37,9 +37,13 @@ struct ConversationsView: View {
                 //∆ ........... [LazyVStack] ...........
                 VStack(alignment: .leading) {
                     
-                    ForEach(0..<19) { _ in
+                    ForEach(0..<20) { _ in
                         //∆..........
-                        ConvoCellComponent()
+                        NavigationLink(
+                            destination: Text("Destination"),
+                            label: {
+                                ConvoCellComponent()
+                            })
                     }// ∆ END ForEach
                     
                     //∆ HANGER ™👕™ .................
@@ -50,11 +54,7 @@ struct ConversationsView: View {
             }// ∆ END ScrollView
             
             // MARK: -∆ ••••••••• [ Bottom Right Button ] •••••••••
-            Button(action: {
-                //∆..........
-                
-                
-            }) {
+            Button(action: { isShowingNewMsgView.toggle() }) {
                 //∆..... LABEL .....
                 Image(systemName: "envelope")
                     .resizable()
@@ -67,6 +67,14 @@ struct ConversationsView: View {
             .foregroundColor(.white)
             .clipShape(Circle())
             .padding()
+            // MARK: - sheet
+            //--|............................................
+            .sheet(isPresented: $isShowingNewMsgView, content: {
+                //∆..........
+                SearchView()
+            })
+            //--|............................................
+            
             //∆ HANGER ™👕™ .................
             
         }///||END__PARENT-ZSTACK||

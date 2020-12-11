@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB38A40725825E2000F5BF67 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A40625825E2000F5BF67 /* SearchView.swift */; };
 		AB38A40C25825EF800F5BF67 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */; };
+		AB4B3E5A2583A28600CDFC91 /* MsgInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B3E592583A28600CDFC91 /* MsgInputView.swift */; };
 		AB64C5A12582482C005BA342 /* TweetCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64C5A02582482C005BA342 /* TweetCellComponent.swift */; };
 		AB73A92825821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73A92725821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneAppApp.swift */; };
 		AB73A92A25821FC500E21DC3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73A92925821FC500E21DC3 /* MainView.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		AB38A40625825E2000F5BF67 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
+		AB4B3E592583A28600CDFC91 /* MsgInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgInputView.swift; sourceTree = "<group>"; };
 		AB64C5A02582482C005BA342 /* TweetCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellComponent.swift; sourceTree = "<group>"; };
 		AB73A92425821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFirebase_TwitterCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB73A92725821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFirebase_TwitterCloneAppApp.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				AB75433C2582B6BC00430821 /* ConversationsView.swift */,
 				AB7543442582B71500430821 /* ConvoCellComponent.swift */,
+				AB4B3E592583A28600CDFC91 /* MsgInputView.swift */,
 			);
 			path = "MessageViews+Components";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				AB75E2BE25824C6B008C3AAF /* CircleImageComponent.swift in Sources */,
 				AB75E2D225825AB8008C3AAF /* TweetCellButtonComponentView.swift in Sources */,
 				AB75433D2582B6BC00430821 /* ConversationsView.swift in Sources */,
+				AB4B3E5A2583A28600CDFC91 /* MsgInputView.swift in Sources */,
 				AB7543312582A9EB00430821 /* UserCellView.swift in Sources */,
 				AB38A40C25825EF800F5BF67 /* SearchBarComponent.swift in Sources */,
 				AB64C5A12582482C005BA342 /* TweetCellComponent.swift in Sources */,
