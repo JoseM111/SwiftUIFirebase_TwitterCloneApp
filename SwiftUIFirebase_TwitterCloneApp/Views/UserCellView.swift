@@ -38,7 +38,7 @@ struct UserCellView: View {
             }
             
         }///||END__PARENT-VSTACK||
-        
+        .foregroundColor(.black)
         //.............................
         
     }///-|_End Of body_|
