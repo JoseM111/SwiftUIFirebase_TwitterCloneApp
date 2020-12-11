@@ -17,9 +17,8 @@ struct CircleImageComponent: View {
     var body: some View {
         Image(imageName)
             .resizable()
-            .scaledToFit()
+            .scaledToFill()
             .clipShape(Circle())
             .frame(width: 56, height: 56)
-            .padding(.leading)
     }
 }

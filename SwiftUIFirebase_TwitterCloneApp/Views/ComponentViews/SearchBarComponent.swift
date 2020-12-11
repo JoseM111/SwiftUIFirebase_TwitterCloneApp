@@ -1,7 +1,7 @@
 import SwiftUI
 
 // MARK: - Preview
-struct SearchBarComponentView_Previews: PreviewProvider {
+struct SearchBarComponent_Previews: PreviewProvider {
     
     static var previews: some View {
         
