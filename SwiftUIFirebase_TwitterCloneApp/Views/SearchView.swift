@@ -23,11 +23,27 @@ struct SearchView: View {
     var body: some View {
         
         //.............................
-        VStack {
+        ScrollView {
             
-            SearchBarComponentView(text: $searchText)
+            // MARK: -∆ ••••••••• [ SearchBarComponent ] •••••••••
+            SearchBarComponent(text: $searchText)
+                .padding()
             
-        }///||END__PARENT-VSTACK||
+            //∆ ........... VStack ...........
+            VStack(alignment: .leading) {
+                
+                ForEach(0..<12) { _ in
+                    //∆..........
+                    /// ∆ Needs a view in the for-each for the `.leading` to work
+                    HStack { Spacer(minLength: 0) }
+                    UserCellView()
+                }// ∆ END ForEach
+                
+            }// ∆ END VStack
+            .padding(.leading)
+            //∆ HANGER ™👕™ .................
+            
+        }///||END__PARENT-SCROLLVIEW||
         
         //.............................
         

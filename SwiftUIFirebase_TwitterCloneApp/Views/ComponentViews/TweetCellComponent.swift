@@ -5,7 +5,7 @@ struct TweetCellView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        TweetCellView()//.padding(.all, 100)
+        TweetCellComponent()//.padding(.all, 100)
         //.preferredColorScheme(.dark)
         //.previewLayout(.sizeThatFits)
         //.previewLayout(.fixed(width: 360, height: 720))
@@ -14,7 +14,7 @@ struct TweetCellView_Previews: PreviewProvider {
     }
 }
 
-struct TweetCellView: View {
+struct TweetCellComponent: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
     let bruceWayneStatusText = "It is not what i am underneath, but what i do that defines me."
@@ -29,7 +29,8 @@ struct TweetCellView: View {
             HStack(alignment: .top, spacing: 12) {
                 
                 // MARK: -∆ ••••••••• [ CircleImageComponentView ] •••••••••
-                CircleImageComponentView(imageName: "batman")
+                CircleImageComponent(imageName: "batman")
+                    .padding(.leading, 20)
                 
                 // MARK: -∆ ••• Text that is right of the image(VStack) •••
                 VStack(alignment: .leading, spacing: 4) {
@@ -65,34 +66,27 @@ struct TweetCellView: View {
             
             HStack {
                 
-                Button("bubble.left") {
+                ///∆ ........... bubble.left ...........
+                TweetCellBtnComponent(sfImageName: "bubble.left") {
                     //∆..........
                     
                 }
-                .font(.system(size: 16))
-                .frame(width: 32, height: 32)
                 
                 Spacer(minLength: 0) // Spaced Horizontally
                 
                 ///∆ ........... arrow.2.squarepath ...........
-                Button("arrow.2.squarepath") {
+                TweetCellBtnComponent(sfImageName: "arrow.2.squarepath") {
                     //∆..........
                     
-                    
                 }
-                .font(.system(size: 16))
-                .frame(width: 32, height: 32)
                 
                 Spacer(minLength: 0) // Spaced Horizontally
                 
                 ///∆ ........... heart ...........
-                Button("heart") {
+                TweetCellBtnComponent(sfImageName: "heart") {
                     //∆..........
                     
-                    
                 }
-                .font(.system(size: 16))
-                .frame(width: 32, height: 32)
                 
                 Spacer(minLength: 0) // Spaced Horizontally
                 

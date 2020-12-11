@@ -1,11 +1,11 @@
 import SwiftUI
 
 // MARK: - Preview
-struct FeedView_Previews: PreviewProvider {
+struct ConversationsView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        FeedView()//.padding(.all, 100)
+        ConversationsView()//.padding(.all, 100)
         //.preferredColorScheme(.dark)
         //.previewLayout(.sizeThatFits)
         .previewLayout(.fixed(width: 360, height: 720))
@@ -14,7 +14,7 @@ struct FeedView_Previews: PreviewProvider {
     }
 }
 
-struct FeedView: View {
+struct ConversationsView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
     
@@ -35,20 +35,19 @@ struct FeedView: View {
                 ///  ............
                 
                 //∆ ........... [LazyVStack] ...........
-                VStack {
+                VStack(alignment: .leading) {
                     
-                    ForEach(0..<9, id: \.self) { _ in
+                    ForEach(0..<19) { _ in
                         //∆..........
-                        
-                        TweetCellComponent()
+                        ConvoCellComponent()
                     }// ∆ END ForEach
+                    
                     //∆ HANGER ™👕™ .................
                     
                 }// ∆ END VStack
                 .padding()
                 //∆ HANGER ™👕™ .................
-                
-            }
+            }// ∆ END ScrollView
             
             // MARK: -∆ ••••••••• [ Bottom Right Button ] •••••••••
             Button(action: {
@@ -57,9 +56,8 @@ struct FeedView: View {
                 
             }) {
                 //∆..... LABEL .....
-                Image("tweet")
+                Image(systemName: "envelope")
                     .resizable()
-                    .renderingMode(.template)
                     .scaledToFit()
                     .frame(width: 32, height: 32)
                     .padding()
@@ -72,7 +70,7 @@ struct FeedView: View {
             //∆ HANGER ™👕™ .................
             
         }///||END__PARENT-ZSTACK||
-        
+
         //.............................
         
     }///-|_End Of body_|

@@ -1,22 +1,19 @@
 import SwiftUI
 
-struct TweetCellButtonComponentView: View {
+struct TweetCellBtnComponent: View {
     // MARK: - ©PROPERTIES
     //∆..............................
-    var actionCompletionHandler: (() -> Void)
     let sfImageName: String
+    var actionCompletionHandler: (() -> Void)
     //∆..............................
     
     //∆.....................................................
     var body: some View {
         
         ///∆ ............... Button ...............
-        Button(action: actionCompletionHandler) {
-            //∆..... LABEL .....
-            Image(systemName: sfImageName)
-                .font(.system(size: 16))
-                .frame(width: 32, height: 32)
-        }
+        Button(sfImageName, completionHandler: actionCompletionHandler)
+            .font(.system(size: 16))
+            .frame(width: 32, height: 32)
     }
 }
 

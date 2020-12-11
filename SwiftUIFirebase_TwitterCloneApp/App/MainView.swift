@@ -43,17 +43,16 @@ struct MainView: View {
                          Text("Search")
                      }
                 //∆ ........... Message ...........
-                FeedView()
+                ConversationsView()
                      .tabItem {
                          //∆..........
                          Image(systemName: "envelope")
                          Text("Messages")
                      }
             }// ∆ END TabView
-            .navigationTitle("Home")
-            .navigationBarTitleDisplayMode(.inline)
             //∆ HANGER ™👕™ .................
-            
+            .navigationBarTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
         }///||END__PARENT-NavigationView||
         //.............................
         
