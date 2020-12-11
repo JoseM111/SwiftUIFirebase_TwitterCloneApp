@@ -18,12 +18,20 @@ struct ConversationsView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
     @State var isShowingNewMsgView: Bool = false
+    @State var showChat: Bool = false
     //∆..............................
     
     var body: some View {
         
         //.............................
         ZStack(alignment: .bottomTrailing) {
+            
+            NavigationLink(
+                destination: ChatView(),
+                isActive: $showChat,
+                label: {
+                    /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+                })
             
             // MARK: -∆ ••••••••• [ ScrollView ] •••••••••
             ScrollView {
@@ -40,7 +48,7 @@ struct ConversationsView: View {
                     ForEach(0..<20) { _ in
                         //∆..........
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: ChatView(),
                             label: {
                                 ConvoCellComponent()
                             })
@@ -71,7 +79,7 @@ struct ConversationsView: View {
             //--|............................................
             .sheet(isPresented: $isShowingNewMsgView, content: {
                 //∆..........
-                SearchView()
+                NewMsgView(show: $isShowingNewMsgView, startChat: $showChat)
             })
             //--|............................................
             

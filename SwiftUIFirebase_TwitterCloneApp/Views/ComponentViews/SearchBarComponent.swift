@@ -7,7 +7,7 @@ struct SearchBarComponent_Previews: PreviewProvider {
         
         ///  • With `Binding<String>` variables you can do: .constant("Enter preferred text")
         SearchBarComponent(text: .constant("Search..."))//.padding(.all, 100)
-            .preferredColorScheme(.dark)
+            //.preferredColorScheme(.dark)
             //.previewLayout(.sizeThatFits)
             //.previewLayout(.fixed(width: 360, height: 720))
             // The preview below is for like a card
@@ -44,8 +44,6 @@ struct SearchBarComponent: View {
                     }
                 )
                 //--|............................................
-            
-            
         }///||END__PARENT-HSTACK||
         .padding(.horizontal, 10)
         //.............................
