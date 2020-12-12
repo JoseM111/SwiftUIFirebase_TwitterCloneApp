@@ -26,12 +26,17 @@ struct UserProfileView: View {
     var body: some View {
         
         //.............................
-        VStack(spacing: 8.0) {
+        ScrollView {
             
-            iAmHere(myStr: "ProfileView")
+            VStack {
+                
+                // MARK: -∆ ••••••••• [ ProfileHeaderView ] •••••••••
+                ProfileHeaderView()
+                
+            }// ∆ END VStack
             
-        }///||END__PARENT-VSTACK||
-        
+        }///||END__PARENT-SCROLLVIEW||
+        .navigationTitle("@batman")
         //.............................
         
     }///-|_End Of body_|
