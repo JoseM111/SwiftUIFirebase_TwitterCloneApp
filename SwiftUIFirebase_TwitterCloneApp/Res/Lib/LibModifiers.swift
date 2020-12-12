@@ -50,6 +50,26 @@ struct OuterFrameCardModifier: ViewModifier {
     }
 }
 
+// MARK: -∆ ••••••••• [ Action Button Modifier ] •••••••••
+struct ActionButtonMod: ViewModifier {
+    // MARK: - ©PROPERTIES
+    //∆..............................
+    var bgColor: Color = .clear
+    var frameWidth: CGFloat = 100
+    //∆..............................
+    
+    // MARK: -∆ ••••••••• Implementing Protocol Stub  •••••••••
+    func body(content: Content) -> some View {
+        //∆..........
+        content
+            .font(.system(size: 16, weight: .semibold))
+            .frame(width: frameWidth, height: 40)
+            .background(bgColor)
+            .foregroundColor(.white)
+            .cornerRadius(20)
+            .modifier(TextShadowModifier())
+    }
+}
 
 // MARK: -∆ ••••••••• TextShadowModifier •••••••••
 struct TextShadowModifier: ViewModifier {
