@@ -84,6 +84,9 @@ struct ProfileHeaderView: View {
             .padding()
             //∆ HANGER ™👕™ .................
             
+            // MARK: -∆ ••••••••• [ Edit Profile Button ] •••••••••
+            ProfileActionBtnComponent(isCurrentUser: false)
+            
             Spacer(minLength: 0) // Spaced Vertically
             
         }///||END__PARENT-VSTACK||
