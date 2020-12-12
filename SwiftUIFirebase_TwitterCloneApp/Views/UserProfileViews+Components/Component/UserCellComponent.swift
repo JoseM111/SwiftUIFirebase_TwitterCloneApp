@@ -1,11 +1,11 @@
 import SwiftUI
 
 // MARK: - Preview
-struct UserCellView_Previews: PreviewProvider {
+struct UserCellComponent_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        UserCellView()//.padding(.all, 100)
+        UserCellComponent()//.padding(.all, 100)
         //.preferredColorScheme(.dark)
         //.previewLayout(.sizeThatFits)
         //.previewLayout(.fixed(width: 360, height: 720))
@@ -14,7 +14,7 @@ struct UserCellView_Previews: PreviewProvider {
     }
 }
 
-struct UserCellView: View {
+struct UserCellComponent: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
     
@@ -25,7 +25,9 @@ struct UserCellView: View {
         //.............................
         HStack(spacing: 12) {
             
-            CircleImageComponent(imageName: "venom-10")
+            // MARK: -∆ ••••••••• [ Venom Circular Image ] •••••••••
+            Image("venom-10")
+                .imageCircleMod(aspectR: .fill, frameW: 56, frameH: 56)
             
             //∆ ........... VStack ...........
             VStack(alignment: .leading, spacing: 4) {

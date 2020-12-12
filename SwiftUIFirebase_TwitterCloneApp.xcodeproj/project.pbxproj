@@ -24,10 +24,13 @@
 		AB73A9632582207C00E21DC3 /* LibModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73A9622582207C00E21DC3 /* LibModifiers.swift */; };
 		AB73A97F258237F900E21DC3 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73A97E258237F900E21DC3 /* FeedView.swift */; };
 		AB73A984258238D100E21DC3 /* LibStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73A983258238D100E21DC3 /* LibStructs.swift */; };
-		AB7543312582A9EB00430821 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7543302582A9EB00430821 /* UserCellView.swift */; };
+		AB74056025853C9E00B70552 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB74055F25853C9E00B70552 /* UserProfileView.swift */; };
+		AB7405812585437D00B70552 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7405802585437D00B70552 /* ProfileHeaderView.swift */; };
+		AB740586258543B100B70552 /* ProfileActionBtnComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB740585258543B100B70552 /* ProfileActionBtnComponent.swift */; };
+		AB74058E2585452B00B70552 /* FilterBtnComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB74058D2585452B00B70552 /* FilterBtnComponent.swift */; };
+		AB7543312582A9EB00430821 /* UserCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7543302582A9EB00430821 /* UserCellComponent.swift */; };
 		AB75433D2582B6BC00430821 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75433C2582B6BC00430821 /* ConversationsView.swift */; };
 		AB7543452582B71500430821 /* ConvoCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7543442582B71500430821 /* ConvoCellComponent.swift */; };
-		AB75E2BE25824C6B008C3AAF /* CircleImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75E2BD25824C6B008C3AAF /* CircleImageComponent.swift */; };
 		AB75E2D225825AB8008C3AAF /* TweetCellButtonComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75E2D125825AB8008C3AAF /* TweetCellButtonComponentView.swift */; };
 		ABA262AF2583E7920092DC1C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA262AE2583E7920092DC1C /* ChatView.swift */; };
 		ABA262B72583EA810092DC1C /* ChatBubbleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA262B62583EA810092DC1C /* ChatBubbleComponent.swift */; };
@@ -74,10 +77,13 @@
 		AB73A9622582207C00E21DC3 /* LibModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibModifiers.swift; sourceTree = "<group>"; };
 		AB73A97E258237F900E21DC3 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		AB73A983258238D100E21DC3 /* LibStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibStructs.swift; sourceTree = "<group>"; };
-		AB7543302582A9EB00430821 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		AB74055F25853C9E00B70552 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		AB7405802585437D00B70552 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		AB740585258543B100B70552 /* ProfileActionBtnComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionBtnComponent.swift; sourceTree = "<group>"; };
+		AB74058D2585452B00B70552 /* FilterBtnComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBtnComponent.swift; sourceTree = "<group>"; };
+		AB7543302582A9EB00430821 /* UserCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellComponent.swift; sourceTree = "<group>"; };
 		AB75433C2582B6BC00430821 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 		AB7543442582B71500430821 /* ConvoCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvoCellComponent.swift; sourceTree = "<group>"; };
-		AB75E2BD25824C6B008C3AAF /* CircleImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageComponent.swift; sourceTree = "<group>"; };
 		AB75E2D125825AB8008C3AAF /* TweetCellButtonComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellButtonComponentView.swift; sourceTree = "<group>"; };
 		ABA262AE2583E7920092DC1C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		ABA262B62583EA810092DC1C /* ChatBubbleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleComponent.swift; sourceTree = "<group>"; };
@@ -199,11 +205,11 @@
 		AB73A96A2582241100E21DC3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB74055E25853C8300B70552 /* UserProfileViews+Components */,
 				AB75433B2582B67200430821 /* MessageViews+Components */,
 				AB73A96B2582241700E21DC3 /* ComponentViews */,
 				AB73A97E258237F900E21DC3 /* FeedView.swift */,
 				AB38A40625825E2000F5BF67 /* SearchView.swift */,
-				AB7543302582A9EB00430821 /* UserCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				AB64C5A02582482C005BA342 /* TweetCellComponent.swift */,
-				AB75E2BD25824C6B008C3AAF /* CircleImageComponent.swift */,
 				AB75E2D125825AB8008C3AAF /* TweetCellButtonComponentView.swift */,
 				AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */,
 			);
@@ -241,6 +246,26 @@
 				AB73A92925821FC500E21DC3 /* MainView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		AB74055E25853C8300B70552 /* UserProfileViews+Components */ = {
+			isa = PBXGroup;
+			children = (
+				AB74056D25853FDD00B70552 /* Component */,
+				AB74055F25853C9E00B70552 /* UserProfileView.swift */,
+				AB7405802585437D00B70552 /* ProfileHeaderView.swift */,
+			);
+			path = "UserProfileViews+Components";
+			sourceTree = "<group>";
+		};
+		AB74056D25853FDD00B70552 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				AB740585258543B100B70552 /* ProfileActionBtnComponent.swift */,
+				AB7543302582A9EB00430821 /* UserCellComponent.swift */,
+				AB74058D2585452B00B70552 /* FilterBtnComponent.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		AB75433B2582B67200430821 /* MessageViews+Components */ = {
@@ -385,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB74058E2585452B00B70552 /* FilterBtnComponent.swift in Sources */,
 				AB38A40725825E2000F5BF67 /* SearchView.swift in Sources */,
 				AB7543452582B71500430821 /* ConvoCellComponent.swift in Sources */,
 				AB73A97F258237F900E21DC3 /* FeedView.swift in Sources */,
@@ -393,18 +419,20 @@
 				AB73A984258238D100E21DC3 /* LibStructs.swift in Sources */,
 				ABA262B72583EA810092DC1C /* ChatBubbleComponent.swift in Sources */,
 				AB73A95B2582206B00E21DC3 /* LibTools.swift in Sources */,
-				AB75E2BE25824C6B008C3AAF /* CircleImageComponent.swift in Sources */,
 				AB0354972583F8A3008255E6 /* MsgModel.swift in Sources */,
 				AB75E2D225825AB8008C3AAF /* TweetCellButtonComponentView.swift in Sources */,
 				AB3E9DDC258402BB0062EB75 /* NewMsgView.swift in Sources */,
 				AB3E9DD6258400970062EB75 /* MessageView.swift in Sources */,
+				AB7405812585437D00B70552 /* ProfileHeaderView.swift in Sources */,
 				AB75433D2582B6BC00430821 /* ConversationsView.swift in Sources */,
 				AB4B3E5A2583A28600CDFC91 /* MsgInputView.swift in Sources */,
-				AB7543312582A9EB00430821 /* UserCellView.swift in Sources */,
+				AB7543312582A9EB00430821 /* UserCellComponent.swift in Sources */,
 				AB38A40C25825EF800F5BF67 /* SearchBarComponent.swift in Sources */,
 				AB64C5A12582482C005BA342 /* TweetCellComponent.swift in Sources */,
 				AB73A9632582207C00E21DC3 /* LibModifiers.swift in Sources */,
+				AB74056025853C9E00B70552 /* UserProfileView.swift in Sources */,
 				AB73A92825821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneAppApp.swift in Sources */,
+				AB740586258543B100B70552 /* ProfileActionBtnComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

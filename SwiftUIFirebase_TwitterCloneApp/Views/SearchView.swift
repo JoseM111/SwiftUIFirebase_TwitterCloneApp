@@ -34,9 +34,24 @@ struct SearchView: View {
                 
                 ForEach(0..<12) { _ in
                     //∆..........
-                    /// ∆ Needs a view in the for-each for the `.leading` to work
-                    HStack { Spacer(minLength: 0) }
-                    UserCellView()
+                    HStack { Spacer() }
+                    
+                    // MARK: -∆ Navigates to our UserProfileView
+                    NavigationLink(
+                        destination: UserProfileView(),
+                        label: {
+                            ///∆ ...........
+                            ///  • The `NavigationLink` works like a `Button`,
+                            ///    where you can `click` it like a `Button` &
+                            ///    it will `navigate` to where your argument
+                            ///    passed on the parameter->`destination`.
+                            ///
+                            ///  • The `UserCellComponent` is the component
+                            ///    being `rendered` in the `cell` while
+                            ///    iterrating through the `ForEach`
+                            ///  ............
+                            UserCellComponent()
+                        })
                 }// ∆ END ForEach
                 
             }// ∆ END VStack

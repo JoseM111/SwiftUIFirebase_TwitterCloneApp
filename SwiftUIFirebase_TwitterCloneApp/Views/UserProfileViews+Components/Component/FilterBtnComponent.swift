@@ -1,48 +1,41 @@
 import SwiftUI
 
 // MARK: - Preview
-struct MsgInputView_Previews: PreviewProvider {
+struct FilterBtnComponent_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        MsgInputView(msgtext: .constant(""))//.padding(.all, 100)
+        FilterBtnComponent()//.padding(.all, 100)
         //.preferredColorScheme(.dark)
         //.previewLayout(.sizeThatFits)
         //.previewLayout(.fixed(width: 360, height: 720))
         // The preview below is for like a card
-        .previewLayout(.fixed(width: 440, height: 270))
+        //.previewLayout(.fixed(width: 440, height: 270))
     }
 }
 
-struct MsgInputView: View {
+struct FilterBtnComponent: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    @Binding var msgtext: String
-    //∆..............................       
+    
+    //∆..............................
+    
+    ///∆ ............... Class Methods ...............
+    
     
     var body: some View {
         
         //.............................
-        HStack {
+        VStack(spacing: 8.0) {
             
-            TextField("message", text: $msgtext)
-                .textFieldStyle(PlainTextFieldStyle())
-                .frame(minHeight: 30)
+            iAmHere(myStr: "FilterBtnComponent")
             
-            Button("Send", completionWhenText: {
-                //∆..........
-                
-            })
-            
-        }///||END__PARENT-HSTACK||
+        }///||END__PARENT-VSTACK||
         
         //.............................
         
     }///-|_End Of body_|
     /*©-----------------------------------------©*/
-    
-    ///∆ ............... Class Methods ...............
-    
     
 }// END: [STRUCT]
 
