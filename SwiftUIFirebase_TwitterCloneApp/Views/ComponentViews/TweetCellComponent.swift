@@ -32,6 +32,7 @@ struct TweetCellComponent: View {
                 Image("batman")
                     .imageCircleMod(aspectR: .fill, frameW: 56, frameH: 56)
                     .padding(.leading, 20)
+                    .shadow(color: Color.black.opacity(0.85), radius: 10, x: 2, y: 4)
                 
                 // MARK: -∆ ••• Text that is right of the image(VStack) •••
                 VStack(alignment: .leading, spacing: 4) {
