@@ -1,5 +1,22 @@
 import SwiftUI
 
+
+// MARK: -∆ ••••••••• [ Custom Image Modifier ] •••••••••
+extension Image {
+    
+    ///∆ ...........
+    ///  • Creates a custom look for an image
+    func imageCircleMod(aspectR: ContentMode, frameW: CGFloat,
+                        frameH: CGFloat) -> some View {
+        //∆..........
+        self
+            .resizable()
+            .aspectRatio(contentMode: aspectR)
+            .frame(width: frameW, height: frameH)
+            .clipShape(Circle())
+    }
+}
+
 // MARK: -∆ ••••••••• OuterFrameCardModifier •••••••••
 struct OuterFrameCardModifier: ViewModifier {
     // MARK: - ©PROPERTIES

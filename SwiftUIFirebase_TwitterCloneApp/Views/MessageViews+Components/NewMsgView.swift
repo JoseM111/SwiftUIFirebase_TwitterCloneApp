@@ -45,10 +45,12 @@ struct NewMsgView: View {
                     // MARK: -∆ ••••••••• [ UserCellView ] BUTTON •••••••••
                     Button(action: {
                         //∆..........
-                        show.toggle()
+                        show = false
                         startChat.toggle()
                         //∆..........
-                    }) { UserCellView() }
+                    }) { UserCellComponent() }// ∆ END Button
+                    //∆..........
+                    
                 }// ∆ END ForEach
                 
             }// ∆ END VStack

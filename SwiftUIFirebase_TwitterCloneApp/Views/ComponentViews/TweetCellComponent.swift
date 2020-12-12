@@ -29,7 +29,8 @@ struct TweetCellComponent: View {
             HStack(alignment: .top, spacing: 12) {
                 
                 // MARK: -∆ ••••••••• [ CircleImageComponentView ] •••••••••
-                CircleImageComponent(imageName: "batman")
+                Image("batman")
+                    .imageCircleMod(aspectR: .fill, frameW: 56, frameH: 56)
                     .padding(.leading, 20)
                 
                 // MARK: -∆ ••• Text that is right of the image(VStack) •••

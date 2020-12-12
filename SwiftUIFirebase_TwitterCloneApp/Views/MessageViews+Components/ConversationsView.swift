@@ -30,7 +30,7 @@ struct ConversationsView: View {
                 destination: ChatView(),
                 isActive: $showChat,
                 label: {
-                    /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+
                 })
             
             // MARK: -∆ ••••••••• [ ScrollView ] •••••••••
@@ -87,6 +87,7 @@ struct ConversationsView: View {
             
         }///||END__PARENT-ZSTACK||
 
+        
         //.............................
         
     }///-|_End Of body_|

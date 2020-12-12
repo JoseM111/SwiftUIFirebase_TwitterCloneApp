@@ -27,7 +27,8 @@ struct ConvoCellComponent: View {
             
             HStack(spacing: 12) {
                 
-                CircleImageComponent(imageName: "venom-10")
+                Image("venom-10")
+                    .imageCircleMod(aspectR: .fill, frameW: 56, frameH: 56)
                 
                 //∆ ........... VStack ...........
                 VStack(alignment: .leading, spacing: 4) {
