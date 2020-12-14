@@ -30,7 +30,7 @@ struct ProfileHeaderView: View {
             
             // MARK: -∆ ••••••••• [ Batman Profile Image ] •••••••••
             Image("batman")
-                .imageCircleMod(aspectR: .fill, frameW: 120, frameH: 120)
+                .circleImageFrame(aspectR: .fill, frameW: 120, frameH: 120)
                 .shadow(color: .black, radius: 10, x: 0.0, y: 0.0)
             
             // MARK: -∆ ••••••••• [ Profile Name ] •••••••••

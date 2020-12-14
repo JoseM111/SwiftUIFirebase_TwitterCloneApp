@@ -27,7 +27,7 @@ struct UserCellComponent: View {
             
             // MARK: -∆ ••••••••• [ Venom Circular Image ] •••••••••
             Image("venom-10")
-                .imageCircleMod(aspectR: .fill, frameW: 56, frameH: 56)
+                .circleImageFrame(aspectR: .fill, frameW: 56, frameH: 56)
                 .shadow(color: Color.black.opacity(0.65),
                         radius: 10, x: 2, y: 4)
             //∆ ........... VStack ...........
