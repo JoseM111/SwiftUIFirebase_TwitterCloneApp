@@ -5,6 +5,7 @@ extension Color {
     //__________
     static let netflixRed = Color(r: 229, g: 10, b: 21)
     static let twitterBlue = Color(r: 77, g: 159, b: 235)
+    static let flowerRed = Color(r: 171, g: 41, b: 46)
     static let midGreen = Color(r: 59, g: 129, b: 37)
     static let lightBlue = Color(r: 91, g: 194, b: 244)
     static let lightBlue2 = Color(r: 193, g: 253, b: 251)
@@ -16,6 +17,8 @@ extension Color {
     static let lightPurple = Color(r: 161, g: 83, b: 205)
     static let darkPurple = Color(r: 60, g: 33, b: 119)
     static let darkBlue = Color(r: 51, g: 61, b: 126)
+    static let midOrange = Color(r: 232, g: 117, b: 46)
+
     
     /// ∆ Initializer
     /// <convenience> keyword can be left out because Initializers
