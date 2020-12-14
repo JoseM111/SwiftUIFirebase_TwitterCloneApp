@@ -17,7 +17,7 @@ struct FeedView_Previews: PreviewProvider {
 struct FeedView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    
+    @State var isShowingNewTweetView: Bool = false
     //∆..............................
     
     var body: some View {
@@ -51,11 +51,7 @@ struct FeedView: View {
             }
             
             // MARK: -∆ ••••••••• [ Bottom Right Button ] •••••••••
-            Button(action: {
-                //∆..........
-                
-                
-            }) {
+            Button(action: { isShowingNewTweetView.toggle() }) {
                 //∆..... LABEL .....
                 Image("tweet")
                     .resizable()
@@ -69,6 +65,16 @@ struct FeedView: View {
             .foregroundColor(.white)
             .clipShape(Circle())
             .padding()
+            // MARK: - fullScreenCover That pops up a sheet to the NewTweetView
+            //--|............................................
+            .fullScreenCover(isPresented: $isShowingNewTweetView) {
+                //∆..........
+                ///  • When the cancel button from the `NewTweetView`
+                ///    is pressed it will dismiss back to the `FeedView`
+                ///  ............
+                NewTweetView(isPresented: $isShowingNewTweetView)
+            }
+            //--|............................................
             //∆ HANGER ™👕™ .................
             
         }///||END__PARENT-ZSTACK||

@@ -30,7 +30,7 @@ struct TweetCellComponent: View {
                 
                 // MARK: -∆ ••••••••• [ CircleImageComponentView ] •••••••••
                 Image("batman")
-                    .imageCircleMod(aspectR: .fill, frameW: 56, frameH: 56)
+                    .circleImageFrame(aspectR: .fill, frameW: 56, frameH: 56)
                     .padding(.leading, 20)
                     .shadow(color: Color.black.opacity(0.85), radius: 10, x: 2, y: 4)
                 

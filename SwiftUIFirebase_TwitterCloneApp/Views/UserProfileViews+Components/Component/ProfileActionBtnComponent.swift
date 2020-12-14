@@ -34,7 +34,7 @@ struct ProfileActionBtnComponent: View {
 
                 //∆..........
             })
-            .modifier(ActionButtonMod(bgColor: .blue, frameWidth: 340))
+            .modifier(ButtonCustomFrame(bgColor: .blue, frameWidth: 340))
             //∆..........
         } else {
             //∆..........
@@ -46,7 +46,7 @@ struct ProfileActionBtnComponent: View {
                     
                     //∆..........
                 })
-                .modifier(ActionButtonMod(bgColor: .blue, frameWidth: 160))
+                .modifier(ButtonCustomFrame(bgColor: .blue, frameWidth: 160))
                 
                 //∆.....................................................
                 
@@ -56,7 +56,7 @@ struct ProfileActionBtnComponent: View {
                     
                     //∆..........
                 })
-                .modifier(ActionButtonMod(bgColor: .darkPurple, frameWidth: 160))
+                .modifier(ButtonCustomFrame(bgColor: .darkPurple, frameWidth: 160))
             }
         }// ∆ END if-else
         

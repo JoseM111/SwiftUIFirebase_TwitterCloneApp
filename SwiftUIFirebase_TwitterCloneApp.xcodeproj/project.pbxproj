@@ -35,6 +35,8 @@
 		AB9B051E2586A08300FFB56E /* TweetFilterOptionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9B051D2586A08300FFB56E /* TweetFilterOptionEnum.swift */; };
 		ABA262AF2583E7920092DC1C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA262AE2583E7920092DC1C /* ChatView.swift */; };
 		ABA262B72583EA810092DC1C /* ChatBubbleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA262B62583EA810092DC1C /* ChatBubbleComponent.swift */; };
+		ABBB000C2587ECE4000CF022 /* NewTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB000B2587ECE4000CF022 /* NewTweetView.swift */; };
+		ABBB001D2587F8FB000CF022 /* TextAreaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB001C2587F8FB000CF022 /* TextAreaComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		AB9B051D2586A08300FFB56E /* TweetFilterOptionEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterOptionEnum.swift; sourceTree = "<group>"; };
 		ABA262AE2583E7920092DC1C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		ABA262B62583EA810092DC1C /* ChatBubbleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleComponent.swift; sourceTree = "<group>"; };
+		ABBB000B2587ECE4000CF022 /* NewTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetView.swift; sourceTree = "<group>"; };
+		ABBB001C2587F8FB000CF022 /* TextAreaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAreaComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 		AB73A96A2582241100E21DC3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ABBB00072587EBF3000CF022 /* TweetViews+Components */,
 				AB74055E25853C8300B70552 /* UserProfileViews+Components */,
 				AB75433B2582B67200430821 /* MessageViews+Components */,
 				AB73A96B2582241700E21DC3 /* ComponentViews */,
@@ -219,6 +224,7 @@
 		AB73A96B2582241700E21DC3 /* ComponentViews */ = {
 			isa = PBXGroup;
 			children = (
+				ABBB001C2587F8FB000CF022 /* TextAreaComponent.swift */,
 				AB64C5A02582482C005BA342 /* TweetCellComponent.swift */,
 				AB75E2D125825AB8008C3AAF /* TweetCellButtonComponentView.swift */,
 				AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */,
@@ -290,6 +296,14 @@
 				AB9B051D2586A08300FFB56E /* TweetFilterOptionEnum.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		ABBB00072587EBF3000CF022 /* TweetViews+Components */ = {
+			isa = PBXGroup;
+			children = (
+				ABBB000B2587ECE4000CF022 /* NewTweetView.swift */,
+			);
+			path = "TweetViews+Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB74058E2585452B00B70552 /* FilterBtnComponent.swift in Sources */,
+				ABBB001D2587F8FB000CF022 /* TextAreaComponent.swift in Sources */,
 				AB38A40725825E2000F5BF67 /* SearchView.swift in Sources */,
 				AB7543452582B71500430821 /* ConvoCellComponent.swift in Sources */,
 				AB9B051E2586A08300FFB56E /* TweetFilterOptionEnum.swift in Sources */,
@@ -443,6 +458,7 @@
 				AB64C5A12582482C005BA342 /* TweetCellComponent.swift in Sources */,
 				AB73A9632582207C00E21DC3 /* LibModifiers.swift in Sources */,
 				AB74056025853C9E00B70552 /* UserProfileView.swift in Sources */,
+				ABBB000C2587ECE4000CF022 /* NewTweetView.swift in Sources */,
 				AB73A92825821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneAppApp.swift in Sources */,
 				AB740586258543B100B70552 /* ProfileActionBtnComponent.swift in Sources */,
 			);

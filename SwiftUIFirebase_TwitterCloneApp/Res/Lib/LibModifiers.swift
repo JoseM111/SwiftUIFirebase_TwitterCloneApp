@@ -6,7 +6,7 @@ extension Image {
     
     ///∆ ...........
     ///  • Creates a custom look for an image
-    func imageCircleMod(aspectR: ContentMode, frameW: CGFloat,
+    func circleImageFrame(aspectR: ContentMode, frameW: CGFloat,
                         frameH: CGFloat) -> some View {
         //∆..........
         self
@@ -51,11 +51,12 @@ struct OuterFrameCardModifier: ViewModifier {
 }
 
 // MARK: -∆ ••••••••• [ Action Button Modifier ] •••••••••
-struct ActionButtonMod: ViewModifier {
+struct ButtonCustomFrame: ViewModifier {
     // MARK: - ©PROPERTIES
     //∆..............................
     var bgColor: Color = .clear
     var frameWidth: CGFloat = 100
+    var frameHeight: CGFloat = 40
     //∆..............................
     
     // MARK: -∆ ••••••••• Implementing Protocol Stub  •••••••••
@@ -63,7 +64,7 @@ struct ActionButtonMod: ViewModifier {
         //∆..........
         content
             .font(.system(size: 16, weight: .semibold))
-            .frame(width: frameWidth, height: 40)
+            .frame(width: frameWidth, height: frameHeight)
             .background(bgColor)
             .foregroundColor(.white)
             .cornerRadius(20)

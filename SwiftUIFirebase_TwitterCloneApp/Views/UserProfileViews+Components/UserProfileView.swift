@@ -39,6 +39,7 @@ struct UserProfileView: View {
                 ForEach(0..<9) { tweet in
                     //∆..........
                     TweetCellComponent()
+                        .padding(.top, 8)
                         .padding(.leading)
                         .padding(.trailing, 8)
                 }
