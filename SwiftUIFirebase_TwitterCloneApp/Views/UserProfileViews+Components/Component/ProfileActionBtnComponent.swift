@@ -56,7 +56,7 @@ struct ProfileActionBtnComponent: View {
                     
                     //∆..........
                 })
-                .modifier(ActionButtonMod(bgColor: .purple, frameWidth: 160))
+                .modifier(ActionButtonMod(bgColor: .darkPurple, frameWidth: 160))
             }
         }// ∆ END if-else
         

@@ -17,7 +17,7 @@ struct UserProfileView_Previews: PreviewProvider {
 struct UserProfileView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    
+    @State var selectedFilterOption: TweetFilterOptionEnum = .tweets
     //∆..............................
     
     ///∆ ............... Class Methods ...............
@@ -32,6 +32,16 @@ struct UserProfileView: View {
                 
                 // MARK: -∆ ••••••••• [ ProfileHeaderView ] •••••••••
                 ProfileHeaderView()
+                
+                // MARK: -∆ ••••••••• [  ] •••••••••
+                FilterBtnComponent(selectedOption: $selectedFilterOption)
+                
+                ForEach(0..<9) { tweet in
+                    //∆..........
+                    TweetCellComponent()
+                        .padding(.leading)
+                        .padding(.trailing, 8)
+                }
                 
             }// ∆ END VStack
             
