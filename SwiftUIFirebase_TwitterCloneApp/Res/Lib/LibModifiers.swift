@@ -55,6 +55,7 @@ struct ButtonCustomFrame: ViewModifier {
     // MARK: - ©PROPERTIES
     //∆..............................
     var bgColor: Color = .clear
+    var fgColor: Color = .white
     var frameWidth: CGFloat = 100
     var frameHeight: CGFloat = 40
     //∆..............................
@@ -66,8 +67,8 @@ struct ButtonCustomFrame: ViewModifier {
             .font(.system(size: 16, weight: .semibold))
             .frame(width: frameWidth, height: frameHeight)
             .background(bgColor)
-            .foregroundColor(.white)
-            .cornerRadius(20)
+            .foregroundColor(fgColor)
+            .clipShape(Capsule())
             .modifier(TextShadowModifier())
     }
 }
