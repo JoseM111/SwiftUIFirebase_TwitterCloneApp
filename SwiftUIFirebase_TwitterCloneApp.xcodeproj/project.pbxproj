@@ -10,6 +10,7 @@
 		AB0354972583F8A3008255E6 /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0354962583F8A3008255E6 /* MsgModel.swift */; };
 		AB38A40725825E2000F5BF67 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A40625825E2000F5BF67 /* SearchView.swift */; };
 		AB38A40C25825EF800F5BF67 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */; };
+		AB3B1D212589743D0087E303 /* ImagePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B1D202589743D0087E303 /* ImagePickerComponent.swift */; };
 		AB3E9DD6258400970062EB75 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E9DD5258400970062EB75 /* MessageView.swift */; };
 		AB3E9DDC258402BB0062EB75 /* NewMsgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E9DDB258402BB0062EB75 /* NewMsgView.swift */; };
 		AB4B3E5A2583A28600CDFC91 /* MsgInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B3E592583A28600CDFC91 /* MsgInputView.swift */; };
@@ -41,6 +42,7 @@
 		ABD02B47258940C60000C89A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD02B46258940C60000C89A /* RegistrationView.swift */; };
 		ABD02B60258944BC0000C89A /* CustomTextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD02B5F258944BC0000C89A /* CustomTextFieldComponent.swift */; };
 		ABD02B6825894BB50000C89A /* CustomSecureFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD02B6725894BB50000C89A /* CustomSecureFieldComponent.swift */; };
+		ABD02B7C2589685F0000C89A /* BackBtnComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD02B7B2589685F0000C89A /* BackBtnComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		AB0354962583F8A3008255E6 /* MsgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgModel.swift; sourceTree = "<group>"; };
 		AB38A40625825E2000F5BF67 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
+		AB3B1D202589743D0087E303 /* ImagePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerComponent.swift; sourceTree = "<group>"; };
 		AB3E9DD5258400970062EB75 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		AB3E9DDB258402BB0062EB75 /* NewMsgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMsgView.swift; sourceTree = "<group>"; };
 		AB4B3E592583A28600CDFC91 /* MsgInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgInputView.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		ABD02B46258940C60000C89A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		ABD02B5F258944BC0000C89A /* CustomTextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldComponent.swift; sourceTree = "<group>"; };
 		ABD02B6725894BB50000C89A /* CustomSecureFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureFieldComponent.swift; sourceTree = "<group>"; };
+		ABD02B7B2589685F0000C89A /* BackBtnComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBtnComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,7 @@
 				AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */,
 				ABD02B5F258944BC0000C89A /* CustomTextFieldComponent.swift */,
 				ABD02B6725894BB50000C89A /* CustomSecureFieldComponent.swift */,
+				AB3B1D202589743D0087E303 /* ImagePickerComponent.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 		ABD02B57258943EA0000C89A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ABD02B7B2589685F0000C89A /* BackBtnComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				AB9B051E2586A08300FFB56E /* TweetFilterOptionEnum.swift in Sources */,
 				AB73A97F258237F900E21DC3 /* FeedView.swift in Sources */,
 				ABD02B6825894BB50000C89A /* CustomSecureFieldComponent.swift in Sources */,
+				AB3B1D212589743D0087E303 /* ImagePickerComponent.swift in Sources */,
 				AB73A92A25821FC500E21DC3 /* MainView.swift in Sources */,
 				ABA262AF2583E7920092DC1C /* ChatView.swift in Sources */,
 				AB73A984258238D100E21DC3 /* LibStructs.swift in Sources */,
@@ -499,6 +506,7 @@
 				AB73A9632582207C00E21DC3 /* LibModifiers.swift in Sources */,
 				AB74056025853C9E00B70552 /* UserProfileView.swift in Sources */,
 				ABBB000C2587ECE4000CF022 /* NewTweetView.swift in Sources */,
+				ABD02B7C2589685F0000C89A /* BackBtnComponent.swift in Sources */,
 				AB73A92825821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneAppApp.swift in Sources */,
 				AB740586258543B100B70552 /* ProfileActionBtnComponent.swift in Sources */,
 			);

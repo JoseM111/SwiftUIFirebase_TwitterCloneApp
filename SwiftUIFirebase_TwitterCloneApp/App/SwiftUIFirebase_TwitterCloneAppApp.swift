@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUIFirebase_TwitterCloneAppApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+//            MainView()
+            LoginView()
         }
     }
 }
