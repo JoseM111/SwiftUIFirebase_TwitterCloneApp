@@ -17,20 +17,104 @@ struct RegistrationView_Previews: PreviewProvider {
 struct RegistrationView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var fullname: String = ""
+    @State var username: String = ""
+    @State var showImagePicker: Bool = false
+    ///  • Handles the state of the image picker functionality
+    ///  ............
+    @State var selectedUIImage: UIImage?
+    @State var image: Image?
     //∆..............................
     
-    ///∆ ............... Class Methods ...............
-    
+    fileprivate func extractedFunc() -> some View {
+        return // MARK: -∆ ••••••••• [ Button(ADD-PHOTO) ] •••••••••
+            Button(action: { showImagePicker.toggle() }) {
+                //∆..... LABEL .....
+                //∆..........
+                if let image = image {
+                    //∆..........
+                    convertedUIImageLoaded(for: image)
+                    //∆..........
+                } else {
+                    //∆..........
+                    defaultPlusSignImage(imageToLoad: "plus_photo")
+                }// ∆ END if-else
+            }// ∆ END Button
+            // MARK: - sheet To segue to a image picker & convert a UIImage to a Image when onDismiss runs the loadImage functions
+            //--|............................................
+            .sheet(isPresented: $showImagePicker, onDismiss: loadImage, content: {
+                //∆..........
+                ImagePickerComponent(uiImage: $selectedUIImage)
+            })
+    }
     
     var body: some View {
         
-        //.............................
-        VStack(spacing: 8.0) {
+        ///∆ ........... Parent View ...........
+        ZStack {
             
-            iAmHere(myStr: "RegistrationView")
+            //∆ ........... [ VSTACK ] ...........
+            VStack {
+                
+                extractedFunc()
+                //--|............................................
+                
+                ///∆ ........... [ VStack ] ...........
+                VStack(spacing: 20) {
+                    
+                    // MARK: -∆ ••••••••• [ EMAIL TEXTFIELD ] •••••••••
+                    CustomTextFieldComponent(text: $email,
+                                             placeholder: Text("Email"),
+                                             sfImageName: "envelope")
+                    
+                    // MARK: -∆ ••••••••• [ FULL NAME ] •••••••••
+                    CustomTextFieldComponent(text: $fullname,
+                                             placeholder: Text("Full Name"),
+                                             sfImageName: "person")
+                    
+                    // MARK: -∆ ••••••••• [ USER NAME ] •••••••••
+                    CustomTextFieldComponent(text: $username,
+                                             placeholder: Text("Username"),
+                                             sfImageName: "person")
+                    
+                    // MARK: -∆ ••••••••• [ PASSWORD TEXTFIELD ] •••••••••
+                    CustomSecureFieldComponent(text: $password, placeholder: Text("Password"))
+                }// ∆ END VStack
+                .padding(.horizontal, 32)
+                //∆ HANGER ™👕™ .................
+                
+                
+                // MARK: -∆ ••••••••• [ Button(Sign In) ] •••••••••
+                Button(action: {  }) {
+                    //∆..... LABEL .....
+                    Text("Sign Up")
+                        .modifier(ButtonCustomFrame(
+                                    bgColor: .white,
+                                    fgColor: Color(#colorLiteral(red: 0.1155984178, green: 0.6330730319, blue: 0.9510951638, alpha: 1)),
+                                    frameWidth: 360,
+                                    frameHeight: 50))
+                        .padding()
+                }// ∆ END Button
+                
+                //∆ HANGER ™👕™ .................
+                
+                Spacer(minLength: 0) // Spaced Vertically
+                
+                // MARK: -∆ •• [ Custom Back Button(to dismiss the view from the stack) ] ••
+                BackBtnComponent(text: "Already have an account?")
+                
+                
+            }// ∆ END VStack
             
-        }///||END__PARENT-VSTACK||
+            //∆ HANGER ™👕™ .................
+            
+        }///||END__PARENT-NAVIGATIONVIEW||
+        // MARK: -∆ ••••••••• [ BACKGROUND-COLOR ] •••••••••
+        .background(Color(#colorLiteral(red: 0.1155984178, green: 0.6330730319, blue: 0.9510951638, alpha: 1)))
+        .ignoresSafeArea()
+        //∆ HANGER ™👕™ .................
         
         //.............................
         
@@ -39,5 +123,40 @@ struct RegistrationView: View {
     
 }// END: [STRUCT]
 
-/*©-----------------------------------------©*/
+extension RegistrationView {
+    //∆..............................
+    
+    ///∆ ............... Class Methods ...............
+    ///  • Converts a UIImage into a SwiftUI Image
+    ///  ............
+    func loadImage() {
+        //∆..........
+        guard let selectedImage = selectedUIImage else { return }
+        image = Image(uiImage: selectedImage)
+    }
+    
+    fileprivate func convertedUIImageLoaded(for image: Image) -> some View {
+        //∆..........
+        return image
+            .resizable()
+            .scaledToFill()
+            .frame(width: 140, height: 140)
+            .clipShape(Circle())
+            .padding(.top, 72)
+            .padding(.bottom, 16)
+    }
+    
+    fileprivate func defaultPlusSignImage(imageToLoad: String) -> some View {
+        //∆..........
+        return Image(imageToLoad)
+            .resizable()
+            .renderingMode(.template)
+            .scaledToFill()
+            .frame(width: 140, height: 140)
+            .padding(.top, 72)
+            .padding(.bottom, 16)
+            .foregroundColor(.white)
+    }
+}// END: [STRUCT]
 
+/*©-----------------------------------------©*/
