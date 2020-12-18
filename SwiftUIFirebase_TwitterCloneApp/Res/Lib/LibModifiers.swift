@@ -17,6 +17,23 @@ extension Image {
     }
 }
 
+// MARK: -∆ ••••••••• [ BackGroundColorOnZStack ] •••••••••
+struct BgColor_On_ZStackModifier: ViewModifier {
+    // MARK: - ©PROPERTIES
+    //∆..............................
+    var bgColor: Color = Color.clear
+    //∆..............................
+    
+    // MARK: -∆ ••••••••• Implementing Protocol Stub  •••••••••
+        func body(content: Content) -> some View {
+            //∆..........
+            content
+                .frame(width: FULL_UI_SCREEN_WIDTH)
+                .background(bgColor)
+                .ignoresSafeArea()
+        }
+}
+
 // MARK: -∆ ••••••••• OuterFrameCardModifier •••••••••
 struct OuterFrameCardModifier: ViewModifier {
     // MARK: - ©PROPERTIES

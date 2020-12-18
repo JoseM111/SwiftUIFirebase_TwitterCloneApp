@@ -5,6 +5,7 @@ extension Color {
     //__________
     static let netflixRed = Color(r: 229, g: 10, b: 21)
     static let twitterBlue = Color(r: 77, g: 159, b: 235)
+    static let twitterBlue2 = Color(red: 0.1155984178, green: 0.6330730319, blue: 0.9510951638)
     static let flowerRed = Color(r: 171, g: 41, b: 46)
     static let midGreen = Color(r: 59, g: 129, b: 37)
     static let lightBlue = Color(r: 91, g: 194, b: 244)
@@ -30,7 +31,11 @@ extension Color {
         self.init(red: r/255, green: g/255, blue: b/255)
     }
     //∆.................................
-}
+}/// ∆ END extension Color
+
+// MARK: -∆ ••••••••• [ Screen sizes ] •••••••••
+let FULL_UI_SCREEN_WIDTH: CGFloat = UIScreen.main.bounds.size.width
+let FULL_UI_SCREEN_HEIGHT: CGFloat = UIScreen.main.bounds.size.height
 
 /**©--------------------------------------------------------------©*/
 

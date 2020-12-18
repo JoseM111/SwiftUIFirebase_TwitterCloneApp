@@ -34,7 +34,7 @@ struct ProfileActionBtnComponent: View {
 
                 //∆..........
             })
-            .modifier(ButtonCustomFrame(bgColor: .blue, frameWidth: 340))
+            .modifier(ButtonCustomFrame(bgColor: .twitterBlue2, frameWidth: 340))
             //∆..........
         } else {
             //∆..........
@@ -46,7 +46,7 @@ struct ProfileActionBtnComponent: View {
                     
                     //∆..........
                 })
-                .modifier(ButtonCustomFrame(bgColor: .blue, frameWidth: 160))
+                .modifier(ButtonCustomFrame(bgColor: .twitterBlue2, frameWidth: 160))
                 
                 //∆.....................................................
                 
