@@ -28,28 +28,6 @@ struct RegistrationView: View {
     @State var image: Image?
     //∆..............................
     
-    fileprivate func extractedFunc() -> some View {
-        return // MARK: -∆ ••••••••• [ Button(ADD-PHOTO) ] •••••••••
-            Button(action: { showImagePicker.toggle() }) {
-                //∆..... LABEL .....
-                //∆..........
-                if let image = image {
-                    //∆..........
-                    convertedUIImageLoaded(for: image)
-                    //∆..........
-                } else {
-                    //∆..........
-                    defaultPlusSignImage(imageToLoad: "plus_photo")
-                }// ∆ END if-else
-            }// ∆ END Button
-            // MARK: - sheet To segue to a image picker & convert a UIImage to a Image when onDismiss runs the loadImage functions
-            //--|............................................
-            .sheet(isPresented: $showImagePicker, onDismiss: loadImage, content: {
-                //∆..........
-                ImagePickerComponent(uiImage: $selectedUIImage)
-            })
-    }
-    
     var body: some View {
         
         ///∆ ........... Parent View ...........
@@ -112,10 +90,9 @@ struct RegistrationView: View {
             
         }///||END__PARENT-NAVIGATIONVIEW||
         // MARK: -∆ ••••••••• [ BACKGROUND-COLOR ] •••••••••
-        .background(Color(#colorLiteral(red: 0.1155984178, green: 0.6330730319, blue: 0.9510951638, alpha: 1)))
-        .ignoresSafeArea()
+        .modifier(BgColor_On_ZStackModifier(bgColor: .twitterBlue2))
         //∆ HANGER ™👕™ .................
-        
+//        Color(#colorLiteral(red: 0.1155984178, green: 0.6330730319, blue: 0.9510951638, alpha: 1))
         //.............................
         
     }///-|_End Of body_|
@@ -127,8 +104,8 @@ extension RegistrationView {
     //∆..............................
     
     ///∆ ............... Class Methods ...............
+    ///
     ///  • Converts a UIImage into a SwiftUI Image
-    ///  ............
     func loadImage() {
         //∆..........
         guard let selectedImage = selectedUIImage else { return }
@@ -156,6 +133,28 @@ extension RegistrationView {
             .padding(.top, 72)
             .padding(.bottom, 16)
             .foregroundColor(.white)
+    }
+    
+    fileprivate func extractedFunc() -> some View {
+        return // MARK: -∆ ••••••••• [ Button(ADD-PHOTO) ] •••••••••
+            Button(action: { showImagePicker.toggle() }) {
+                //∆..... LABEL .....
+                //∆..........
+                if let image = image {
+                    //∆..........
+                    convertedUIImageLoaded(for: image)
+                    //∆..........
+                } else {
+                    //∆..........
+                    defaultPlusSignImage(imageToLoad: "plus_photo")
+                }// ∆ END if-else
+            }// ∆ END Button
+            // MARK: - sheet To segue to a image picker & convert a UIImage to a Image when onDismiss runs the loadImage functions
+            //--|............................................
+            .sheet(isPresented: $showImagePicker, onDismiss: loadImage, content: {
+                //∆..........
+                ImagePickerComponent(uiImage: $selectedUIImage)
+            })
     }
 }// END: [STRUCT]
 

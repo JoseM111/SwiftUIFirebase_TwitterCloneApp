@@ -44,12 +44,12 @@ struct LoginView: View {
                     
                     ///∆ ........... [ VStack ] ...........
                     VStack(spacing: 20) {
-                        
+
                         // MARK: -∆ ••••••••• [ EMAIL TEXTFIELD ] •••••••••
                         CustomTextFieldComponent(text: $email,
                                                  placeholder: Text("Email"),
                                                  sfImageName: "envelope")
-                        
+
                         // MARK: -∆ ••••••••• [ PASSWORD TEXTFIELD ] •••••••••
                         CustomSecureFieldComponent(text: $password, placeholder: Text("Password"))
                     }// ∆ END VStack
@@ -58,9 +58,9 @@ struct LoginView: View {
                     
                     ///∆ ........... [ HStack ] ...........
                     HStack {
-                        
+
                         Spacer(minLength: 0) // Spaced Horizontally
-                        
+
                         // MARK: -∆ ••••••••• [ Button(Forgot Password?) ] •••••••••
                         Button(action: {  }) {
                             //∆..... LABEL .....
@@ -72,7 +72,7 @@ struct LoginView: View {
                                 .padding(.trailing, 28)
 
                         }
-                        
+
                     }// ∆ END HStack
                     
                     //∆ HANGER ™👕™ .................
@@ -120,8 +120,9 @@ struct LoginView: View {
                 
             }// ∆ END ZStack
             // MARK: -∆ ••••••••• [ BACKGROUND-COLOR ] •••••••••
-            .background(Color(#colorLiteral(red: 0.1155984178, green: 0.6330730319, blue: 0.9510951638, alpha: 1)))
-            .ignoresSafeArea()
+            .modifier(BgColor_On_ZStackModifier(bgColor: .twitterBlue2))
+            //∆ HANGER ™👕™ .................
+            
         }///||END__PARENT-NAVIGATIONVIEW||
         //.............................
         

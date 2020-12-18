@@ -57,7 +57,7 @@ struct FilterBtnComponent: View {
                         Text(selected.title)
                             .frame(width: underlineWidth - 8)
                             .font(.system(size: 14, weight: .semibold))
-                            .foregroundColor(.twitterBlue)
+                            .foregroundColor(.twitterBlue2)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     .animation(.spring())
