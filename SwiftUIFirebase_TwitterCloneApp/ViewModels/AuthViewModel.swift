@@ -31,9 +31,7 @@ class AuthViewModel: ObservableObject {
             }
             
             /// ∆ Should print out before user is created
-            print("\n---------------------------------\n",
-                  "DEBUG: Successfully uploaded user photo...",
-                  "\n---------------------------------\n")
+            print("DEBUG: Successfully uploaded user photo...")
             
             /// ∆ Accessing the image `URL`
             storageRef.downloadURL { url, _ in
@@ -64,9 +62,7 @@ class AuthViewModel: ObservableObject {
                     
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         //∆..........
-                        print("\n---------------------------------\n",
-                              "DEBUG: Successfully signed up user\n",
-                              "\n---------------------------------\n")
+                        print("DEBUG: Successfully signed up user\n")
                         
                         self.debugRegistrationOutput(email, password, username, fullname)
                     }
@@ -85,14 +81,13 @@ class AuthViewModel: ObservableObject {
                                        _ username: String, _ fullname: String) {
         //∆..........
         print("""
-              \n------------------------------------------
+              DEBUG
               DEBUG: [ REGISTERED USER INFO ]
 
               DEBUG-> Email: \(email)
               DEBUG-> Password: \(password)
               DEBUG-> User Name: \(username)
               DEBUG-> Full Name: \(fullname)
-              ------------------------------------------\n
               """)
     }
     
