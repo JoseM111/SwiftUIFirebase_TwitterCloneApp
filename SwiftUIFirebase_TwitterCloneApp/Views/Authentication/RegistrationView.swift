@@ -34,7 +34,7 @@ struct RegistrationView: View {
     ///    corresponding model object on an ancestor view by
     ///    calling its environmentObject(_:) modifier.
     ///  ............
-    @ObservedObject var authViewModel = AuthViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
     //∆..............................
     
     var body: some View {
@@ -65,6 +65,7 @@ struct RegistrationView: View {
                     CustomTextFieldComponent(text: $username,
                                              placeholder: Text("Username"),
                                              sfImageName: "person")
+                        .autocapitalization(.none)
                     
                     // MARK: -∆ ••••••••• [ PASSWORD TEXTFIELD ] •••••••••
                     CustomSecureFieldComponent(text: $password, placeholder: Text("Password"))

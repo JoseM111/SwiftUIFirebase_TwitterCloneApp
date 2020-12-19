@@ -19,6 +19,7 @@ struct LoginView: View {
     //∆..............................
     @State var email: String = ""
     @State var password: String = ""
+    @EnvironmentObject var authViewModel: AuthViewModel
     //∆..............................
     
     ///∆ ............... Class Methods ...............
@@ -78,7 +79,10 @@ struct LoginView: View {
                     //∆ HANGER ™👕™ .................
                     
                     // MARK: -∆ ••••••••• [ Button(Sign In) ] •••••••••
-                    Button(action: {  }) {
+                    Button(action: {
+                        //∆..........
+                        authViewModel.login(withEmail: email, password: password)
+                    }) {
                         //∆..... LABEL .....
                         Text("Sign In")
                             .modifier(ButtonCustomFrame(

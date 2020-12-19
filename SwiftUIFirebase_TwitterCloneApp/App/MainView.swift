@@ -17,43 +17,53 @@ struct MainView_Previews: PreviewProvider {
 struct MainView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    
+    @EnvironmentObject var authViewModel: AuthViewModel
     //∆..............................
     
     var body: some View {
         
         //.............................
-        NavigationView {
-            
-            // MARK: -∆ ••••••••• [ Tabs At the bottom ] •••••••••
-            TabView {
-                
-                //∆ ........... Home ...........
-               FeedView()
-                    .tabItem {
-                        //∆..........
-                        Image(systemName: "house")
-                        Text("Home")
-                    }
-                //∆ ........... Search ...........
-                SearchView()
-                     .tabItem {
-                         //∆..........
-                         Image(systemName: "magnifyingglass")
-                         Text("Search")
-                     }
-                //∆ ........... Message ...........
-                ConversationsView()
-                     .tabItem {
-                         //∆..........
-                         Image(systemName: "envelope")
-                         Text("Messages")
-                     }
-            }// ∆ END TabView
-            //∆ HANGER ™👕™ .................
-            .navigationBarTitle("Home")
-            .navigationBarTitleDisplayMode(.inline)
-        }///||END__PARENT-NavigationView||
+        Group {
+            ///∆ ...........
+            ///  • If the user is logged in show the main view with tabs
+            ///    else show the login in screen
+            ///  ............
+            if authViewModel.userSession != nil {
+                //∆..........
+                NavigationView {
+                    
+                    // MARK: -∆ ••••••••• [ Tabs At the bottom ] •••••••••
+                    TabView {
+                        
+                        //∆ ........... Home ...........
+                       FeedView()
+                            .tabItem {
+                                //∆..........
+                                Image(systemName: "house")
+                                Text("Home")
+                            }
+                        //∆ ........... Search ...........
+                        SearchView()
+                             .tabItem {
+                                 //∆..........
+                                 Image(systemName: "magnifyingglass")
+                                 Text("Search")
+                             }
+                        //∆ ........... Message ...........
+                        ConversationsView()
+                             .tabItem {
+                                 //∆..........
+                                 Image(systemName: "envelope")
+                                 Text("Messages")
+                             }
+                    }// ∆ END TabView
+                    .navigationBarTitle("Home")
+                    .navigationBarTitleDisplayMode(.inline)
+                    //∆ HANGER ™👕™ .................
+                }// MARK: END--> NavigationView
+
+            } else { LoginView() }// MARK: END--> if-else
+        }// MARK: -∆ ||END__PARENT-Group||
         //.............................
         
     }///-|_End Of body_|

@@ -52,7 +52,7 @@ struct CustomSecureFieldComponent: View {
                 SecureField("", text: $text)
                 
             }// ∆ END HStack
-            
+            .foregroundColor(.white)
             //∆ HANGER ™👕™ .................
             
         }///||END__PARENT-ZSTACK||
