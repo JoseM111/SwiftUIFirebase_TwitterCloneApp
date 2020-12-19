@@ -18,6 +18,7 @@ struct FeedView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
     @State var isShowingNewTweetView: Bool = false
+    @EnvironmentObject var authViewModel: AuthViewModel
     //∆..............................
     
     var body: some View {
@@ -51,7 +52,12 @@ struct FeedView: View {
             }
             
             // MARK: -∆ ••••••••• [ Bottom Right Button ] •••••••••
-            Button(action: { isShowingNewTweetView.toggle() }) {
+            Button(action: {
+                //∆..........
+                authViewModel.signOut()
+//                isShowingNewTweetView.toggle()
+                
+            }) {
                 //∆..... LABEL .....
                 Image("tweet")
                     .resizable()

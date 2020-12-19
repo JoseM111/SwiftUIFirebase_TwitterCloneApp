@@ -50,6 +50,10 @@
 		ABD02B60258944BC0000C89A /* CustomTextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD02B5F258944BC0000C89A /* CustomTextFieldComponent.swift */; };
 		ABD02B6825894BB50000C89A /* CustomSecureFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD02B6725894BB50000C89A /* CustomSecureFieldComponent.swift */; };
 		ABD02B7C2589685F0000C89A /* BackBtnComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD02B7B2589685F0000C89A /* BackBtnComponent.swift */; };
+		ABD44334258E7A7500EFE93C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD44333258E7A7500EFE93C /* UserModel.swift */; };
+		ABD4433A258E911F00EFE93C /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ABD44339258E911F00EFE93C /* KingfisherSwiftUI */; };
+		ABD4433F258E931B00EFE93C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD4433E258E931B00EFE93C /* SearchViewModel.swift */; };
+		ABD44344258E93DF00EFE93C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD44343258E93DF00EFE93C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +119,9 @@
 		ABD02B5F258944BC0000C89A /* CustomTextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldComponent.swift; sourceTree = "<group>"; };
 		ABD02B6725894BB50000C89A /* CustomSecureFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureFieldComponent.swift; sourceTree = "<group>"; };
 		ABD02B7B2589685F0000C89A /* BackBtnComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBtnComponent.swift; sourceTree = "<group>"; };
+		ABD44333258E7A7500EFE93C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ABD4433E258E931B00EFE93C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		ABD44343258E93DF00EFE93C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +133,7 @@
 				AB5A6B952589891800D6F5D3 /* FirebaseFirestore in Frameworks */,
 				AB5A6B932589891800D6F5D3 /* FirebaseAuth in Frameworks */,
 				AB5A6B912589891800D6F5D3 /* FirebaseStorage in Frameworks */,
+				ABD4433A258E911F00EFE93C /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +240,7 @@
 				AB73A9622582207C00E21DC3 /* LibModifiers.swift */,
 				AB73A983258238D100E21DC3 /* LibStructs.swift */,
 				AB5C1DCD258D9F2500441497 /* RegistrationKeys.swift */,
+				ABD44343258E93DF00EFE93C /* Constants.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				AB8F28A4258D782700B40D6B /* AuthViewModel.swift */,
+				ABD4433E258E931B00EFE93C /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -275,6 +285,7 @@
 			children = (
 				AB9B051C2586A06700FFB56E /* Enums */,
 				AB0354962583F8A3008255E6 /* MsgModel.swift */,
+				ABD44333258E7A7500EFE93C /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -386,6 +397,7 @@
 				AB5A6B902589891800D6F5D3 /* FirebaseStorage */,
 				AB5A6B922589891800D6F5D3 /* FirebaseAuth */,
 				AB5A6B942589891800D6F5D3 /* FirebaseFirestore */,
+				ABD44339258E911F00EFE93C /* KingfisherSwiftUI */,
 			);
 			productName = SwiftUIFirebase_TwitterCloneApp;
 			productReference = AB73A92425821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneApp.app */;
@@ -460,6 +472,7 @@
 			mainGroup = AB73A91B25821FC500E21DC3;
 			packageReferences = (
 				AB5A6B8D2589891800D6F5D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				ABD44338258E911F00EFE93C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AB73A92525821FC500E21DC3 /* Products */;
 			projectDirPath = "";
@@ -510,8 +523,10 @@
 				ABD02B47258940C60000C89A /* RegistrationView.swift in Sources */,
 				AB7543452582B71500430821 /* ConvoCellComponent.swift in Sources */,
 				ABD02B60258944BC0000C89A /* CustomTextFieldComponent.swift in Sources */,
+				ABD4433F258E931B00EFE93C /* SearchViewModel.swift in Sources */,
 				AB9B051E2586A08300FFB56E /* TweetFilterOptionEnum.swift in Sources */,
 				AB73A97F258237F900E21DC3 /* FeedView.swift in Sources */,
+				ABD44334258E7A7500EFE93C /* UserModel.swift in Sources */,
 				ABD02B6825894BB50000C89A /* CustomSecureFieldComponent.swift in Sources */,
 				AB3B1D212589743D0087E303 /* ImagePickerComponent.swift in Sources */,
 				AB73A92A25821FC500E21DC3 /* MainView.swift in Sources */,
@@ -537,6 +552,7 @@
 				AB8F28A5258D782700B40D6B /* AuthViewModel.swift in Sources */,
 				ABD02B7C2589685F0000C89A /* BackBtnComponent.swift in Sources */,
 				AB73A92825821FC500E21DC3 /* SwiftUIFirebase_TwitterCloneAppApp.swift in Sources */,
+				ABD44344258E93DF00EFE93C /* Constants.swift in Sources */,
 				AB740586258543B100B70552 /* ProfileActionBtnComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,6 +883,14 @@
 				minimumVersion = 7.3.1;
 			};
 		};
+		ABD44338258E911F00EFE93C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -889,6 +913,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB5A6B8D2589891800D6F5D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		ABD44339258E911F00EFE93C /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABD44338258E911F00EFE93C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

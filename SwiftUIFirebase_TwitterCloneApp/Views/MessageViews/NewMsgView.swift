@@ -20,6 +20,7 @@ struct NewMsgView: View {
     @State var searchText: String = ""
     @Binding var show: Bool
     @Binding var startChat: Bool
+    @ObservedObject var searchViewModel = SearchViewModel()
     //∆..............................
     
     ///∆ ............... Class Methods ...............
@@ -37,7 +38,7 @@ struct NewMsgView: View {
             //∆ ........... VStack ...........
             VStack(alignment: .leading) {
                 
-                ForEach(0..<12) { _ in
+                ForEach(searchViewModel.users) { user in
                     //∆..........
                     /// ∆ Needs a view in the for-each for the `.leading` to work
                     HStack { Spacer(minLength: 0) }
@@ -48,7 +49,7 @@ struct NewMsgView: View {
                         show = false
                         startChat.toggle()
                         //∆..........
-                    }) { UserCellComponent() }// ∆ END Button
+                    }) { UserCellComponent(user: user) }// ∆ END Button
                     //∆..........
                     
                 }// ∆ END ForEach

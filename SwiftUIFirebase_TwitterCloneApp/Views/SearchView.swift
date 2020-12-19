@@ -18,6 +18,7 @@ struct SearchView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
     @State var searchText: String = ""
+    @ObservedObject var searchViewModel = SearchViewModel()
     //∆..............................
     
     var body: some View {
@@ -32,7 +33,7 @@ struct SearchView: View {
             //∆ ........... VStack ...........
             VStack(alignment: .leading) {
                 
-                ForEach(0..<12) { _ in
+                ForEach(searchViewModel.users) { user in
                     //∆..........
                     HStack { Spacer() }
                     
@@ -50,7 +51,7 @@ struct SearchView: View {
                             ///    being `rendered` in the `cell` while
                             ///    iterrating through the `ForEach`
                             ///  ............
-                            UserCellComponent()
+                            UserCellComponent(user: user)
                         })
                 }// ∆ END ForEach
                 

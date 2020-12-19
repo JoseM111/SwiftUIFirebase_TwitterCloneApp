@@ -19,8 +19,13 @@ struct SwiftUIFirebase_TwitterCloneAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            MainView()
-            LoginView()
+            //∆..........
+            ///∆ ...........
+            ///  • The object can be read by any child by using EnvironmentObject.
+            ///
+            ///  • Only needs to be instantiated once! Anywhere environmentObject
+            ///  ............
+            MainView().environmentObject(AuthViewModel())
         }
     }
 }
