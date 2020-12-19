@@ -15,7 +15,7 @@ extension Image {
             .frame(width: frameW, height: frameH)
             .clipShape(Circle())
     }
-}
+}/// ∆ END extension Image  
 
 // MARK: -∆ ••••••••• [ BackGroundColorOnZStack ] •••••••••
 struct BgColor_On_ZStackModifier: ViewModifier {

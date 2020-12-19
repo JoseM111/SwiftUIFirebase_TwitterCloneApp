@@ -5,7 +5,8 @@ struct RegistrationView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        RegistrationView()//.padding(.all, 100)
+        RegistrationView()
+        //.padding(.all, 100)
         //.preferredColorScheme(.dark)
         //.previewLayout(.sizeThatFits)
         //.previewLayout(.fixed(width: 360, height: 720))
@@ -22,10 +23,18 @@ struct RegistrationView: View {
     @State var fullname: String = ""
     @State var username: String = ""
     @State var showImagePicker: Bool = false
-    ///  • Handles the state of the image picker functionality
     ///  ............
+    ///  • Handles the state of the image picker functionality
     @State var selectedUIImage: UIImage?
     @State var image: Image?
+    ///∆ ...........
+    ///  • An environment object invalidates the current view
+    ///    whenever the observable object changes. If you declare
+    ///    a property as an environment object, be sure to set a
+    ///    corresponding model object on an ancestor view by
+    ///    calling its environmentObject(_:) modifier.
+    ///  ............
+    @ObservedObject var authViewModel = AuthViewModel()
     //∆..............................
     
     var body: some View {
@@ -36,7 +45,7 @@ struct RegistrationView: View {
             //∆ ........... [ VSTACK ] ...........
             VStack {
                 
-                extractedFunc()
+                imagePickerFunc()
                 //--|............................................
                 
                 ///∆ ........... [ VStack ] ...........
@@ -59,13 +68,25 @@ struct RegistrationView: View {
                     
                     // MARK: -∆ ••••••••• [ PASSWORD TEXTFIELD ] •••••••••
                     CustomSecureFieldComponent(text: $password, placeholder: Text("Password"))
+                        .foregroundColor(.white)
                 }// ∆ END VStack
                 .padding(.horizontal, 32)
                 //∆ HANGER ™👕™ .................
                 
                 
-                // MARK: -∆ ••••••••• [ Button(Sign In) ] •••••••••
-                Button(action: {  }) {
+                // MARK: -∆ ••••••••• [ Button(Sign Up) ] •••••••••
+                Button(action: {
+                    //∆..........
+                    /// ∆ Unwrapping the `image` property
+                    guard let image = selectedUIImage else { return }
+                    
+                    authViewModel.registerUser(
+                        email: email.lowercased(),
+                        password: password,
+                        username: username,
+                        fullname: fullname,
+                        profileImage: image)
+                }) {
                     //∆..... LABEL .....
                     Text("Sign Up")
                         .modifier(ButtonCustomFrame(
@@ -88,14 +109,16 @@ struct RegistrationView: View {
             
             //∆ HANGER ™👕™ .................
             
-        }///||END__PARENT-NAVIGATIONVIEW||
+        }// MARK: ||END__PARENT-NAVIGATIONVIEW||
+        
         // MARK: -∆ ••••••••• [ BACKGROUND-COLOR ] •••••••••
         .modifier(BgColor_On_ZStackModifier(bgColor: .twitterBlue2))
         //∆ HANGER ™👕™ .................
-//        Color(#colorLiteral(red: 0.1155984178, green: 0.6330730319, blue: 0.9510951638, alpha: 1))
+
         //.............................
         
-    }///-|_End Of body_|
+    }// MARK: ///-|_End Of body_|
+
     /*©-----------------------------------------©*/
     
 }// END: [STRUCT]
@@ -104,8 +127,8 @@ extension RegistrationView {
     //∆..............................
     
     ///∆ ............... Class Methods ...............
-    ///
-    ///  • Converts a UIImage into a SwiftUI Image
+    
+    // MARK: -∆ • Converts a UIImage into a SwiftUI Image
     func loadImage() {
         //∆..........
         guard let selectedImage = selectedUIImage else { return }
@@ -135,7 +158,7 @@ extension RegistrationView {
             .foregroundColor(.white)
     }
     
-    fileprivate func extractedFunc() -> some View {
+    fileprivate func imagePickerFunc() -> some View {
         return // MARK: -∆ ••••••••• [ Button(ADD-PHOTO) ] •••••••••
             Button(action: { showImagePicker.toggle() }) {
                 //∆..... LABEL .....

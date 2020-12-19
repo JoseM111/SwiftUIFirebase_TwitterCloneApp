@@ -52,7 +52,7 @@ struct CustomTextFieldComponent: View {
                 TextField("", text: $text)
                 
             }// ∆ END HStack
-            
+            .foregroundColor(.white)
             //∆ HANGER ™👕™ .................
             
         }///||END__PARENT-ZSTACK||
