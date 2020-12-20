@@ -17,38 +17,12 @@ class AuthViewModel: ObservableObject {
     ///∆.................................
     init() {
         /// ∆ Determines if a user is logged into firebase
-        userSession = Auth.auth().currentUser
+        userSession = FIREBASE_AUTH.currentUser
         fetchUser()
     }
     ///∆.................................
     
-    //∆ ........... [ Class Methods ] ...........
-    
-    // MARK: -∆ ••••••••• login •••••••••
-    func login(withEmail: String, password: String) -> Void {
-        //∆..........
-        Auth.auth().signIn(withEmail: withEmail, password: password) { result, error in
-            //∆..........
-            if let error = error {
-                print("\nDEBUG: {!!!} [ERROR] Failed to login: \(error.localizedDescription) {!!!}")
-                return
-            }
-            
-            /// ∆ Will allow the LoginView to segue to the main interface if login is successful
-            self.userSession = result?.user
-            
-            print("DEBUG: Successfully logged in...")
-        }
-        
-    }// MARK: ∆ END LOGIN
-    
-    // MARK: -∆  logOut •••••••••
-    func signOut() -> Void {
-        //∆..........
-        userSession = nil
-        try? Auth.auth().signOut()
-        
-    }// MARK: END--> logOut
+    ///∆ ........... [ Class Methods ] ...........
     
     // MARK: -∆  registerUser •••••••••
     func registerUser(email: String, password: String, username: String,
@@ -77,7 +51,7 @@ class AuthViewModel: ObservableObject {
                 guard let profileImageURL = url?.absoluteString else { return }
                 
                 // MARK: -∆ (2) Firebase callback to create user •••••••••
-                Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                FIREBASE_AUTH.createUser(withEmail: email, password: password) { result, error in
                     //∆..........
                     if let error = error {
                         print("\nDEBUG: {!!!} [ERROR] Could not create user: \(error.localizedDescription) {!!!}")
@@ -115,9 +89,36 @@ class AuthViewModel: ObservableObject {
     
     
 }// MARK: END OF AuthViewModel
+//∆.....................................................
 
 // MARK: -∆  extension AuthViewModel •••••••••
 extension AuthViewModel {
+    
+    // MARK: -∆ ••••••••• login •••••••••
+    func login(withEmail: String, password: String) -> Void {
+        //∆..........
+        FIREBASE_AUTH.signIn(withEmail: withEmail, password: password) { result, error in
+            //∆..........
+            if let error = error {
+                print("\nDEBUG: {!!!} [ERROR] Failed to login: \(error.localizedDescription) {!!!}")
+                return
+            }
+            
+            /// ∆ Will allow the LoginView to segue to the main interface if login is successful
+            self.userSession = result?.user
+            
+            print("DEBUG: Successfully logged in...")
+        }
+        
+    }// MARK: ∆ END LOGIN
+    
+    // MARK: -∆  logOut •••••••••
+    func signOut() -> Void {
+        //∆..........
+        userSession = nil
+        try? FIREBASE_AUTH.signOut()
+        
+    }// MARK: END--> logOut
     
     // MARK: -∆ ••••••••• registerUser •••••••••
     fileprivate func uploadCollectionToFirestore(user: User, data: [String : String],

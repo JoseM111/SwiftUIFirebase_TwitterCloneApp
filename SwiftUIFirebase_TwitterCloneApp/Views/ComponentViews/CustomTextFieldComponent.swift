@@ -10,7 +10,7 @@ struct CustomTextFieldComponent_Previews: PreviewProvider {
         .preferredColorScheme(.dark)
         //.previewLayout(.sizeThatFits)
         //.previewLayout(.fixed(width: 360, height: 720))
-        // The preview below is for like a card
+        // The preview below is for like a card 
         .previewLayout(.fixed(width: 440, height: 270))
     }
 }

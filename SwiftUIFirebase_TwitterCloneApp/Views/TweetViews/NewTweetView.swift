@@ -37,10 +37,7 @@ struct NewTweetView: View {
                     
                     // MARK: -∆ ••••••••• [ Profile Image ] •••••••••
                     Image("batman")
-                        .circleImageFrame(
-                            aspectR: .fill,
-                            frameW: 64,
-                            frameH: 64)
+                        .circleImageFrame(aspectR: .fill, frameW: 64, frameH: 64)
                         .shadow(color: Color.black.opacity(0.55), radius: 10, x: 0.0, y: 0.0)
                     
                     TextAreaComponent(text: $captionText, placeHolderText)
