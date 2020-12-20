@@ -4,7 +4,8 @@ import KingfisherSwiftUI
 struct ProfileHeaderView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    let user: UserModel
+    @Binding var isFollowed: Bool
+    let profileVM: ProfileViewModel
     //∆..............................
     
     ///∆ ............... Class Methods ...............
@@ -16,21 +17,20 @@ struct ProfileHeaderView: View {
         VStack {
             
             // MARK: -∆ ••••••••• [ Batman Profile Image ] •••••••••
-            KFImage(URL(string: user.profileImageURL))
+            KFImage(URL(string: profileVM.user.profileImageURL))
                 .resizable()
-                .scaledToFill()
-                .clipped()
-                .frame(width: 120, height: 120)
-                .cornerRadius(120)
-                .shadow(color: .black, radius: 10, x: 0.0, y: 0.0)
+                .circleImageFrame(aspectR: .fill, frameW: 120, frameH: 120)
+                .shadow(color: Color.black.opacity(0.65),
+                        radius: 10, x: 2, y: 4)
             
             // MARK: -∆ ••••••••• [ Profile Name ] •••••••••
-            Text(user.fullname)
+            Text(profileVM.user.fullname)
                 .font(.system(size: 16, weight: .semibold))
                 .shadow(color: Color.black.opacity(0.65), radius: 4, x: 3, y: 3)
                 .padding(.top, 8)
+            
             // MARK: -∆ ••••••••• [ @Account Name ] •••••••••
-            Text("@\(user.username)")
+            Text("@\(profileVM.user.username)")
                 .font(.subheadline)
                 .foregroundColor(Color.black.opacity(0.55))
                 .shadow(color: Color.gray, radius: 10, x: 3, y: 3)
@@ -76,7 +76,7 @@ struct ProfileHeaderView: View {
             //∆ HANGER ™👕™ .................
             
             // MARK: -∆ ••••••••• [ Edit Profile Button ] •••••••••
-            ProfileActionBtnComponent(isCurrentUser: user.isCurrentUser)
+            ProfileActionBtnComponent(profileVM: profileVM, isFollowed: $isFollowed)
             
             Spacer(minLength: 0) // Spaced Vertically
             

@@ -5,9 +5,16 @@ struct UserProfileView: View {
     //∆..............................
     @State var selectedFilterOption: TweetFilterOptionEnum = .tweets
     let user: UserModel
+    @ObservedObject var profileVM: ProfileViewModel
     //∆..............................
     
-    ///∆ ............... Class Methods ...............
+    // MARK: -∆ Initializer
+    ///∆.................................
+    init(user: UserModel) {
+        self.user = user
+        self.profileVM = ProfileViewModel(user: user)
+    }
+    ///∆.................................
     
     
     var body: some View {
@@ -18,7 +25,7 @@ struct UserProfileView: View {
             VStack {
                 
                 // MARK: -∆ ••••••••• [ ProfileHeaderView ] •••••••••
-                ProfileHeaderView(user: user)
+                ProfileHeaderView(isFollowed: $profileVM.isFollowed, profileVM: profileVM)
                 
                 // MARK: -∆ ••••••••• [  ] •••••••••
                 FilterBtnComponent(selectedOption: $selectedFilterOption)

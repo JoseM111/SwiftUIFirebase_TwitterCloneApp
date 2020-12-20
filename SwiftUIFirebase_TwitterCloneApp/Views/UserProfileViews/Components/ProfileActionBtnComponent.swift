@@ -1,23 +1,10 @@
 import SwiftUI
 
-// MARK: - Preview
-struct ProfileActionBtnComponent_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        ProfileActionBtnComponent(isCurrentUser: false)//.padding(.all, 100)
-        //.preferredColorScheme(.dark)
-        //.previewLayout(.sizeThatFits)
-        //.previewLayout(.fixed(width: 360, height: 720))
-        // The preview below is for like a card
-        //.previewLayout(.fixed(width: 440, height: 270))
-    }
-}
-
 struct ProfileActionBtnComponent: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    let isCurrentUser: Bool
+    let profileVM: ProfileViewModel
+    @Binding var isFollowed: Bool
     //∆..............................
     
     ///∆ ............... Class Methods ...............
@@ -26,29 +13,30 @@ struct ProfileActionBtnComponent: View {
     var body: some View {
         
         //.............................
-        if isCurrentUser {
+        if profileVM.user.isCurrentUser {
             // MARK: -∆ ••••••••• [ Edit Profile Button ] •••••••••
             //∆.......... If isCurrentUser == true ꜜ⇓⇓⇓ꜜ
             Button("Edit Profile", completionWhenText: {
                 // CODE
-
+                
                 //∆..........
             })
             .modifier(ButtonCustomFrame(bgColor: .twitterBlue2, frameWidth: 340))
+            //∆ HANGER ™👕™ .................
+            
             //∆..........
         } else {
             //∆..........
             HStack {
                 
                 // MARK: -∆ ••••••••• [ Follow Button ] •••••••••
-                Button("Follow", completionWhenText: {
-                    // CODE
-                    
+                Button( isFollowed ? "Following" : "Follow", completionWhenText: {
+                    // if
+                    isFollowed ? profileVM.unFollow() : profileVM.follow()
                     //∆..........
                 })
                 .modifier(ButtonCustomFrame(bgColor: .twitterBlue2, frameWidth: 160))
-                
-                //∆.....................................................
+                //∆ HANGER ™👕™ .................
                 
                 // MARK: -∆ ••••••••• [ Message Button ] •••••••••
                 Button("Message", completionWhenText: {
