@@ -1,4 +1,5 @@
 import SwiftUI
+import Firebase
 
 struct UserModel: Identifiable {
     // MARK: - ∆@PROPERTIES
@@ -8,6 +9,9 @@ struct UserModel: Identifiable {
     let profileImageURL: String
     let fullname: String
     let email: String
+    var isCurrentUser: Bool {
+        Auth.auth().currentUser?.uid == self.id
+    }
     //∆..............................
     
     //∆.....................................................

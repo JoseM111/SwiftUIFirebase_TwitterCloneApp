@@ -1,23 +1,10 @@
 import SwiftUI
-
-// MARK: - Preview
-struct ProfileHeaderView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        ProfileHeaderView()//.padding(.all, 100)
-        //.preferredColorScheme(.dark)
-        //.previewLayout(.sizeThatFits)
-        //.previewLayout(.fixed(width: 360, height: 720))
-        // The preview below is for like a card
-        //.previewLayout(.fixed(width: 440, height: 270))
-    }
-}
+import KingfisherSwiftUI
 
 struct ProfileHeaderView: View {
     // MARK: - ∆Global-PROPERTIES
     //∆..............................
-    
+    let user: UserModel
     //∆..............................
     
     ///∆ ............... Class Methods ...............
@@ -29,17 +16,21 @@ struct ProfileHeaderView: View {
         VStack {
             
             // MARK: -∆ ••••••••• [ Batman Profile Image ] •••••••••
-            Image("batman")
-                .circleImageFrame(aspectR: .fill, frameW: 120, frameH: 120)
+            KFImage(URL(string: user.profileImageURL))
+                .resizable()
+                .scaledToFill()
+                .clipped()
+                .frame(width: 120, height: 120)
+                .cornerRadius(120)
                 .shadow(color: .black, radius: 10, x: 0.0, y: 0.0)
             
             // MARK: -∆ ••••••••• [ Profile Name ] •••••••••
-            Text("Bruce Wayne")
+            Text(user.fullname)
                 .font(.system(size: 16, weight: .semibold))
                 .shadow(color: Color.black.opacity(0.65), radius: 4, x: 3, y: 3)
                 .padding(.top, 8)
             // MARK: -∆ ••••••••• [ @Account Name ] •••••••••
-            Text("@batman")
+            Text("@\(user.username)")
                 .font(.subheadline)
                 .foregroundColor(Color.black.opacity(0.55))
                 .shadow(color: Color.gray, radius: 10, x: 3, y: 3)
@@ -85,7 +76,7 @@ struct ProfileHeaderView: View {
             //∆ HANGER ™👕™ .................
             
             // MARK: -∆ ••••••••• [ Edit Profile Button ] •••••••••
-            ProfileActionBtnComponent(isCurrentUser: false)
+            ProfileActionBtnComponent(isCurrentUser: user.isCurrentUser)
             
             Spacer(minLength: 0) // Spaced Vertically
             

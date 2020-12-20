@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB0354972583F8A3008255E6 /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0354962583F8A3008255E6 /* MsgModel.swift */; };
+		AB330691258F61AA009D5F38 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB330690258F61AA009D5F38 /* ProfileViewModel.swift */; };
 		AB38A40725825E2000F5BF67 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A40625825E2000F5BF67 /* SearchView.swift */; };
 		AB38A40C25825EF800F5BF67 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */; };
 		AB3B1D212589743D0087E303 /* ImagePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B1D202589743D0087E303 /* ImagePickerComponent.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		AB0354962583F8A3008255E6 /* MsgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgModel.swift; sourceTree = "<group>"; };
+		AB330690258F61AA009D5F38 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		AB38A40625825E2000F5BF67 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		AB38A40B25825EF800F5BF67 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
 		AB3B1D202589743D0087E303 /* ImagePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerComponent.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			children = (
 				AB8F28A4258D782700B40D6B /* AuthViewModel.swift */,
 				ABD4433E258E931B00EFE93C /* SearchViewModel.swift */,
+				AB330690258F61AA009D5F38 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				AB0354972583F8A3008255E6 /* MsgModel.swift in Sources */,
 				AB75E2D225825AB8008C3AAF /* TweetCellButtonComponentView.swift in Sources */,
 				AB3E9DDC258402BB0062EB75 /* NewMsgView.swift in Sources */,
+				AB330691258F61AA009D5F38 /* ProfileViewModel.swift in Sources */,
 				AB3E9DD6258400970062EB75 /* MessageView.swift in Sources */,
 				AB7405812585437D00B70552 /* ProfileHeaderView.swift in Sources */,
 				AB75433D2582B6BC00430821 /* ConversationsView.swift in Sources */,
